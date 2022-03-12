@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">Foodie</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_first_screen">Menu pilihan</string>
+    <string name="subtitle_first_screen">Mulai hidup sehat dengan menerapkan pola makan yang sehat</string>
+    <string name="next">Berikutnya</string>
+    <string name="title_second_screen">Tutorial Memasak</string>
+    <string name="subtitle_second_screen">Temukan tutorial masak yang sesuai dengan kategori yang kamu ingingkan</string>
+    <string name="title_third_screen">Pesan Bahan</string>
+    <string name="subtitle_third_screen">Kami sediakan bahan yang sesuai dengan takaran dari tutorial masak kami</string>
+    <string name="title_fourth_screen">Antar Bahan</string>
+    <string name="subtitle_fourth_screen">Kami antarkan bahan masakan sampai kedepan rumahmu</string>
+    <string name="register">Daftar</string>
+    <string name="login">Masuk</string>
+    <string name="skip">Lewati untuk saat ini</string>
+    <string name="splash_subtitle">There is no more sincere love than the love for food</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forget_password">Lupa Password?</string>
+    <string name="or">atau</string>
+    <string name="login_google">Masuk dengan akun Google</string>
+    <string name="have_no_account">Tidak punya akun?</string>
+    <string name="name">Nama</string>
+    <string name="phone_number">Nomor Telepon</string>
+    <string name="address">Alamat</string>
+    <string name="have_an_account">Sudah punya akun?</string>
 </resources>
