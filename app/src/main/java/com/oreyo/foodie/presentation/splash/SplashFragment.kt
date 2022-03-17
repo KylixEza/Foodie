@@ -47,7 +47,9 @@ class SplashFragment : Fragment() {
             if (haveRun) {
                 observeUsername(view)
             } else {
-                view.findNavController().navigate(R.id.action_splashFragment_to_onBoardingFragment)
+                view.findNavController().navigate(
+                    SplashFragmentDirections.actionSplashFragmentToOnBoardingFragment("Splash")
+                )
             }
         }
     }

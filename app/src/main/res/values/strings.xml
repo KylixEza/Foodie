@@ -25,4 +25,5 @@
     <string name="phone_number">Nomor Telepon</string>
     <string name="address">Alamat</string>
     <string name="have_an_account">Sudah punya akun?</string>
+    <string name="title_home">Home</string>
 </resources>

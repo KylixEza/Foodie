@@ -52,6 +52,8 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <argument android:name="source"
+            app:argType="string" />
     </fragment>
     <activity
         android:id="@+id/base_destination"
@@ -77,6 +79,9 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_login_destination_to_on_boarding_destination"
+            app:destination="@id/on_boarding_destination" />
     </fragment>
     <fragment
         android:id="@+id/register_destination"
@@ -97,5 +102,8 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_register_destination_to_on_boarding_destination"
+            app:destination="@id/on_boarding_destination" />
     </fragment>
 </navigation>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.oreyo.foodie.presentation.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_voucher"
+            app:destination="@id/navigation_voucher" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_leadearboard"
+            app:destination="@id/navigation_challenge" />
+        <action
+            android:id="@+id/action_navigation_home_to_categoryActivity"
+            app:destination="@id/navigation_category"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_navigation_home_to_favoriteActivity"
+            app:destination="@id/navigation_favorite"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_navigation_home_to_notificationActivity"
+            app:destination="@id/navigation_notification"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_challenge"
+        android:name="com.oreyo.foodie.presentation.challenge.ChallengeFragment"
+        android:label="fragment_leaderboard"
+        tools:layout="@layout/fragment_challenge" />
+    <fragment
+        android:id="@+id/navigation_voucher"
+        android:name="com.oreyo.foodie.presentation.voucher.VoucherFragment"
+        android:label="fragment_voucher"
+        tools:layout="@layout/fragment_voucher" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.oreyo.foodie.presentation.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
+    <activity
+        android:id="@+id/navigation_category"
+        android:name="com.oreyo.foodie.presentation.category.CategoryActivity"
+        android:label="activity_category"
+        tools:layout="@layout/activity_category" >
+        <argument
+            android:name="categoryTitle"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="categoryType"
+            app:argType="string"
+            android:defaultValue="null" />
+    </activity>
+    <activity
+        android:id="@+id/navigation_favorite"
+        android:name="com.oreyo.foodie.presentation.favorite.FavoriteActivity"
+        android:label="activity_favorite"
+        tools:layout="@layout/activity_favorite" />
+    <activity
+        android:id="@+id/navigation_notification"
+        android:name="com.oreyo.foodie.presentation.notification.NotificationActivity"
+        android:label="activity_notification"
+        tools:layout="@layout/activity_notification" />
+
+</navigation>

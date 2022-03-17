@@ -1,11 +1,12 @@
 package com.oreyo.foodie.presentation.auth.login
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.addCallback
+import androidx.navigation.findNavController
 import com.oreyo.foodie.R
 
 class LoginFragment : Fragment() {
@@ -23,10 +24,13 @@ class LoginFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_login, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        activity?.onBackPressedDispatcher?.addCallback {
+            view.findNavController().navigate(
+                LoginFragmentDirections.actionLoginDestinationToOnBoardingDestination("Login")
+            )
+        }
     }
 
 }

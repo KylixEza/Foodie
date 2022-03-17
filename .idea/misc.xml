@@ -8,15 +8,22 @@
         <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/drawable/ic_foodie_logo.xml" value="0.214" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/drawable/ic_onboard_next.xml" value="0.1945" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/drawable/icon_fourth_screen.xml" value="0.214" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/layout/activity_category.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/layout/activity_favorite.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/layout/activity_main.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/layout/activity_notification.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/layout/activity_splash.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/layout/fragment_first_screen.xml" value="0.22" />
-        <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/layout/fragment_fourth_screen.xml" value="0.12" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/layout/fragment_fourth_screen.xml" value="0.2" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/layout/fragment_login.xml" value="0.25" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/layout/fragment_note.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/layout/fragment_on_boarding.xml" value="0.20677083333333332" />
-        <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/layout/fragment_register.xml" value="0.16" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/layout/fragment_profile.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/layout/fragment_register.xml" value="0.18" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/layout/fragment_second_screen.xml" value="0.18" />
-        <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/layout/fragment_splash.xml" value="0.25" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/layout/fragment_splash.xml" value="0.2" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/layout/fragment_third_screen.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/layout/fragment_voucher.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/layout/include_or_separator.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/layout/register_fragment.xml" value="0.20652173913043478" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/Foodie/app/src/main/res/layout/splash_fragment.xml" value="0.20677083333333332" />
