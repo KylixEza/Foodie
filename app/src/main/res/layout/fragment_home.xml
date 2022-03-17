@@ -1,13 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.home.HomeFragment">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/home_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/include_app_bar_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_your_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_location"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/gray_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_location_point"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="34dp"
+                android:maxLines="1"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_semibold"
+                app:drawableStartCompat="@drawable/ic_location_red"
+                app:layout_constraintStart_toStartOf="@id/tv_your_location"
+                app:layout_constraintTop_toBottomOf="@id/tv_your_location"
+                app:layout_constraintEnd_toStartOf="@id/iv_favorite"
+                android:drawablePadding="8dp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_search_cover"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardBackgroundColor="@color/search_background"
+                app:layout_constraintEnd_toEndOf="@+id/iv_notification"
+                app:layout_constraintStart_toStartOf="@id/tv_location_point"
+                app:layout_constraintTop_toBottomOf="@id/tv_location_point">
+
+                <TextView
+                    android:id="@+id/sv_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/gray"
+                    android:paddingStart="8dp"
+                    android:drawablePadding="8dp"
+                    android:text="Mau masak apa hari ini ?"
+                    app:searchIcon="@drawable/ic_search"
+                    app:drawableStartCompat="@drawable/ic_search" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <ImageButton
+                android:id="@+id/iv_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:src="@drawable/ic_notification"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/cv_search_cover"/>
+
+            <ImageButton
+                android:id="@+id/iv_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_favorite"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toStartOf="@id/iv_notification"
+                app:layout_constraintTop_toTopOf="@id/iv_notification"
+                app:layout_constraintBottom_toBottomOf="@id/iv_notification"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/categories"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/include_app_bar_home"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintStart_toStartOf="@id/tv_category"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_category"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_coupon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_category"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_diet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/diet_menu"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/rv_category"
+            app:layout_constraintTop_toBottomOf="@id/rv_coupon"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_see_all_diet"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:backgroundTint="@color/outlined_button_see_all"
+            android:text="@string/see_all"
+            android:textSize="10sp"
+            android:textAllCaps="false"
+            android:textColor="@color/text_outlined_button_see_all"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_semibold"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_diet"
+            app:layout_constraintBottom_toBottomOf="@id/tv_diet"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_diet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_see_all_diet"
+            app:layout_constraintEnd_toEndOf="@id/btn_see_all_diet">
+            <include
+                android:id="@+id/include_diet"
+                layout="@layout/include_diet"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_popular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/popular_menu"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/tv_diet"
+            app:layout_constraintTop_toBottomOf="@id/container_diet"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_see_all_popular"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:backgroundTint="@color/outlined_button_see_all"
+            android:text="@string/see_all"
+            android:textSize="10sp"
+            android:textAllCaps="false"
+            android:textColor="@color/text_outlined_button_see_all"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_semibold"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_popular"
+            app:layout_constraintBottom_toBottomOf="@id/tv_popular"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_popular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_see_all_popular"
+            app:layout_constraintEnd_toEndOf="@id/btn_see_all_popular">
+            <include
+                android:id="@+id/include_popular"
+                layout="@layout/include_popular"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_exclusive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exclusive_menu"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/tv_popular"
+            app:layout_constraintTop_toBottomOf="@id/container_popular"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_see_all_exclusive"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:backgroundTint="@color/outlined_button_see_all"
+            android:text="@string/see_all"
+            android:textSize="10sp"
+            android:textAllCaps="false"
+            android:textColor="@color/text_outlined_button_see_all"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_semibold"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_exclusive"
+            app:layout_constraintBottom_toBottomOf="@id/tv_exclusive"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_exclusive"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_see_all_exclusive"
+            app:layout_constraintEnd_toEndOf="@id/btn_see_all_exclusive">
+            <include
+                android:id="@+id/include_exclusive"
+                layout="@layout/include_exclusive"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

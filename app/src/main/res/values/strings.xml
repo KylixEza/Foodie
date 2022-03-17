@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Foodie</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_first_screen">Menu pilihan</string>
     <string name="subtitle_first_screen">Mulai hidup sehat dengan menerapkan pola makan yang sehat</string>
     <string name="next">Berikutnya</string>
@@ -26,4 +25,48 @@
     <string name="address">Alamat</string>
     <string name="have_an_account">Sudah punya akun?</string>
     <string name="title_home">Home</string>
+
+
+    <string name="your_location">Lokasimu</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="categories">Kategori</string>
+    <string name="popular_menu">Menu Populer</string>
+    <string name="see_all">Lihat Semua ></string>
+    <string name="exclusive_menu">Menu Ekslusif</string>
+    <string name="home">Home</string>
+    <string name="voucher">Voucher</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="profile">Profile</string>
+    <string name="availability">Ketersediaan Bahan</string>
+    <string name="ingredients">Bahan-bahan:</string>
+    <string name="steps">Langkah-langkah:</string>
+    <string name="title_menu_description">Deskripsi Masakan</string>
+    <string name="estimate_time">Estimasi Waktu</string>
+    <string name="benefit">Benefit yang didapat</string>
+    <string name="title_number_of_rating">Ringkasan Penilaian</string>
+    <string name="title_list_of_review">Daftar Penilaian</string>
+    <string name="message_empty_notification">Belum ada notifikasi yang tersedia</string>
+    <string name="message_empty_favorite">Belum menambahakan apapun dalam favorit kamu</string>
+    <string name="title_top_up">Isi Saldo</string>
+    <string name="rank_poin">Rank Poin</string>
+    <string name="ubah_foto">Ubah Foto</string>
+    <string name="location">Alamatku</string>
+    <string name="history">Riwayat Pesanan</string>
+    <string name="account">Akun</string>
+    <string name="other">Lainnya</string>
+    <string name="cookiez_wallet">Cookiez Wallet</string>
+    <string name="logout">Keluar</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="alamat">Alamat</string>
+    <string name="ubah_profile">Ubah Profil</string>
+    <string name="simpan_perubahan">Simpan Perubahan</string>
+    <string name="information">Information</string>
+    <string name="desc_dialog_voucher">Terus tingkatkan pesananmu untuk mendapat tambahan Coin Poin yang bisa kamu tukar dengan beragam Voucher menarik yang ada.</string>
+    <string name="desc_dialog_rank">Saat ini anda berada pada peringkat ke %d. Terus tingkatkan pesananmu untuk mendapat tambahan poin XP.</string>
+    <string name="ok">OK</string>
+    <string name="diet_menu">Menu Diet</string>
+    <string name="sample_name">Kylix Eza Saputra</string>
+    <string name="sample_email">kylixeza.dev@gmail.com</string>
 </resources>

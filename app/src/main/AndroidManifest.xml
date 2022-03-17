@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Foodie">
         <activity
+            android:name=".presentation.voucher.detail.DetailVoucherActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.notification.NotificationActivity"
             android:exported="false" />
         <activity
