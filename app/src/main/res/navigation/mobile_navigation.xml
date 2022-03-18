@@ -40,6 +40,9 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_navigation_home_to_noteFragment"
+            app:destination="@id/navigation_note" />
     </fragment>
     <fragment
         android:id="@+id/navigation_challenge"
@@ -80,5 +83,10 @@
         android:name="com.oreyo.foodie.presentation.notification.NotificationActivity"
         android:label="activity_notification"
         tools:layout="@layout/activity_notification" />
+    <fragment
+        android:id="@+id/navigation_note"
+        android:name="com.oreyo.foodie.presentation.note.NoteFragment"
+        android:label="fragment_note"
+        tools:layout="@layout/fragment_note" />
 
 </navigation>

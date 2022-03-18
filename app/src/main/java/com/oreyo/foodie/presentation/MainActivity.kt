@@ -1,16 +1,43 @@
 package com.oreyo.foodie.presentation
 
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
 import android.viewbinding.library.activity.viewBinding
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationItemView
+import com.google.android.material.bottomnavigation.BottomNavigationMenuView
 import com.oreyo.foodie.R
 import com.oreyo.foodie.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private val binding by viewBinding<ActivityMainBinding>()
+
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            this.window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+            window.statusBarColor = resources.getColor(R.color.white)
+        }
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        setUpNavigation()
     }
+
+    private fun setUpNavigation() {
+        val navController = findNavController(R.id.nav_host_fragment_activity_base)
+        binding.navView.setupWithNavController(navController)
+
+        /*val bottomMenuView = binding.navView.getChildAt(0) as BottomNavigationMenuView
+        val view = bottomMenuView.getChildAt(2)
+        val itemView = view as BottomNavigationItemView
+
+        val customView = LayoutInflater.from(this).inflate(R.layout.custom_note_fab, bottomMenuView, false)
+        itemView.addView(customView)*/
+    }
+
 }

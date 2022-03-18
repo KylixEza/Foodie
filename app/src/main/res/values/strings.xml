@@ -69,4 +69,6 @@
     <string name="diet_menu">Menu Diet</string>
     <string name="sample_name">Kylix Eza Saputra</string>
     <string name="sample_email">kylixeza.dev@gmail.com</string>
+    <string name="challenge">Challenge</string>
+    <string name="note">Note</string>
 </resources>
