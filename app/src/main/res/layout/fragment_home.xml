@@ -54,7 +54,7 @@
                 app:layout_constraintStart_toStartOf="@id/tv_location_point"
                 app:layout_constraintTop_toBottomOf="@id/tv_location_point">
 
-                <TextView
+                <androidx.appcompat.widget.SearchView
                     android:id="@+id/sv_home"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -64,9 +64,9 @@
                     android:textColor="@color/gray"
                     android:paddingStart="8dp"
                     android:drawablePadding="8dp"
-                    android:text="Mau masak apa hari ini ?"
-                    app:searchIcon="@drawable/ic_search"
-                    app:drawableStartCompat="@drawable/ic_search" />
+                    app:queryHint="Mau masak apa hari ini ?"
+                    app:defaultQueryHint="Mau masak apa hari ini ?"
+                    app:searchHintIcon="@drawable/ic_search"/>
 
             </com.google.android.material.card.MaterialCardView>
 

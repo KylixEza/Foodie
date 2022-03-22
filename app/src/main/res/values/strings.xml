@@ -70,5 +70,22 @@
     <string name="sample_name">Kylix Eza Saputra</string>
     <string name="sample_email">kylixeza.dev@gmail.com</string>
     <string name="challenge">Challenge</string>
+    <string name="challenge_indonesian">Tantangan</string>
     <string name="note">Note</string>
+    <string name="challenge_headline">Yuk, cari tau kebutuhan kalorimu di sini</string>
+    <string name="oresor">Oresor</string>
+    <string name="weight">Berat badan</string>
+    <string name="weight_unit">kg</string>
+    <string name="height">Tinggi badan</string>
+    <string name="height_unit">cm</string>
+    <string name="daily_calories">Kalori kebutuhan harian</string>
+    <string name="calories_unit">kal</string>
+    <string name="reminder">Setel pengingat untuk mencatat</string>
+    <string name="see_notes">Lihat catatan</string>
+    <string name="challenge_tagline">Mulai tantangan hidup sehatmu!</string>
+    <string name="success_get">Berhasil tercatat, kamu\nmendapatkan</string>
+    <string name="challenge_success_tagline">Tetap konsisten dalam memenuhi diet ya, semangat!!!</string>
+    <string name="breakfast">Sarapan</string>
+    <string name="lunch">Makan siang</string>
+    <string name="dinner">Makan malam</string>
 </resources>

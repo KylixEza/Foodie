@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_navigation"
+    app:startDestination="@id/detail_menu_destination">
+
+    <fragment
+        android:id="@+id/detail_menu_destination"
+        android:name="com.oreyo.foodie.presentation.detail.menu.DetailMenuFragment"
+        android:label="fragment_detail_menu"
+        tools:layout="@layout/fragment_detail_menu" >
+        <action
+            android:id="@+id/action_detailMenuFragment_to_detailVariantMenuFragment"
+            app:destination="@id/detail_variant_destination"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detail_variant_destination"
+        android:name="com.oreyo.foodie.presentation.detail.variant.DetailVariantFragment"
+        android:label="DetailVariantMenuFragment"
+        tools:layout="@layout/fragment_detail_variant">
+        <action
+            android:id="@+id/action_detailVariantMenuFragment_to_detailOrderMenuFragment"
+            app:destination="@id/detail_order_destination"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_detailVariantMenuFragment_to_detailMenuFragment"
+            app:destination="@id/detail_menu_destination"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/detail_order_destination"
+        android:name="com.oreyo.foodie.presentation.detail.order.DetailOrderFragment"
+        android:label="DetailOrderMenuFragment"
+        tools:layout="@layout/fragment_detail_order">
+        <action
+            android:id="@+id/action_detailOrderMenuFragment_to_detailOrderVerificationFragment"
+            app:destination="@id/detail_verification_destination"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_detailOrderMenuFragment_to_detailVariantMenuFragment"
+            app:destination="@id/detail_variant_destination"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_detail_order_destination_to_ownVoucherFragment"
+            app:destination="@id/own_voucher_destination"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/detail_verification_destination"
+        android:name="com.oreyo.foodie.presentation.detail.verification.DetailVerificationFragment"
+        android:label="fragment_detail_order_verification"
+        tools:layout="@layout/fragment_detail_verification" >
+        <action
+            android:id="@+id/action_detailOrderVerificationFragment_to_detailOrderMenuFragment"
+            app:destination="@id/detail_order_destination"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/own_voucher_destination"
+        android:name="com.oreyo.foodie.presentation.voucher.my_voucher.MyVoucherFragment"
+        android:label="fragment_own_voucher"
+        tools:layout="@layout/fragment_my_voucher" />
+
+</navigation>

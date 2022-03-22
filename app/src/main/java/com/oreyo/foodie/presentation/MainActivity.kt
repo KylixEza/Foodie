@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.viewbinding.library.activity.viewBinding
+import androidx.core.view.get
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationItemView
@@ -31,13 +32,5 @@ class MainActivity : AppCompatActivity() {
     private fun setUpNavigation() {
         val navController = findNavController(R.id.nav_host_fragment_activity_base)
         binding.navView.setupWithNavController(navController)
-
-        /*val bottomMenuView = binding.navView.getChildAt(0) as BottomNavigationMenuView
-        val view = bottomMenuView.getChildAt(2)
-        val itemView = view as BottomNavigationItemView
-
-        val customView = LayoutInflater.from(this).inflate(R.layout.custom_note_fab, bottomMenuView, false)
-        itemView.addView(customView)*/
     }
-
 }
