@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.challenge.verification.ChallengeVerificationActivity">
+
+    <include
+        android:id="@+id/include_app_bar_note_verification"
+        layout="@layout/include_app_bar_middle"/>
+
+    <ImageView
+        android:id="@+id/iv_icon_success_add_verification"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/icon_success_add_note"
+        android:layout_marginTop="84dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include_app_bar_note_verification"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_success_get"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/success_get"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/iv_icon_success_add_verification"
+        app:layout_constraintTop_toBottomOf="@id/iv_icon_success_add_verification"
+        app:layout_constraintEnd_toEndOf="@id/iv_icon_success_add_verification"/>
+
+    <TextView
+        android:id="@+id/tv_xp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="18sp"
+        android:textColor="@color/primary"
+        android:text="200 XP"
+        app:layout_constraintStart_toStartOf="@id/tv_success_get"
+        app:layout_constraintBottom_toBottomOf="@id/tv_success_get"/>
+
+    <TextView
+        android:id="@+id/tv_calories_tagline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="52dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/calories_tagline"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_success_get"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_total_calories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:textSize="36sp"
+        android:text="@string/calories_get_sample"
+        android:textColor="@color/primary"
+        app:layout_constraintStart_toStartOf="@id/tv_calories_tagline"
+        app:layout_constraintEnd_toEndOf="@id/tv_calories_tagline"
+        app:layout_constraintTop_toBottomOf="@id/tv_calories_tagline"/>
+
+    <TextView
+        android:id="@+id/tv_suggestion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="44dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/suggestion_sample"
+        android:fontFamily="@font/poppins"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_total_calories"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_see_notes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/see_notes"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="@id/tv_suggestion"
+        app:layout_constraintTop_toBottomOf="@id/tv_suggestion"
+        app:layout_constraintEnd_toEndOf="@id/tv_suggestion"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

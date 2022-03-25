@@ -88,4 +88,15 @@
     <string name="breakfast">Sarapan</string>
     <string name="lunch">Makan siang</string>
     <string name="dinner">Makan malam</string>
+    <string name="age">Umur</string>
+    <string name="age_unit">th</string>
+    <string name="date">Tanggal</string>
+    <string name="food_name">Nama makanan</string>
+    <string name="portions">Jumlah porsi</string>
+    <string name="description">Keterangan</string>
+    <string name="note_verification">Apakah data yang diisikan sudah benar?</string>
+    <string name="save">Simpan</string>
+    <string name="calories_tagline">Jumlah kalori pada makanan anda adalah</string>
+    <string name="calories_get_sample">650 kal</string>
+    <string name="suggestion_sample">Kamu disarankan untuk terus menjaga pola makan sehat dan perbanyak minum air putih</string>
 </resources>

@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.viewbinding.library.fragment.viewBinding
-import androidx.activity.OnBackPressedCallback
 import androidx.viewpager2.widget.ViewPager2
 import com.oreyo.foodie.R
 import com.oreyo.foodie.databinding.FragmentFirstScreenBinding
@@ -27,7 +26,7 @@ class FirstScreenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager)
+        val viewPager = activity?.findViewById<ViewPager2>(R.id.fake_viewpager)
         binding.btnNext.setOnClickListener {
             viewPager?.currentItem = 1
         }

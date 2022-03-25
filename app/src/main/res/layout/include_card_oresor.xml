@@ -90,7 +90,7 @@
 
         <EditText
             android:id="@+id/edt_height"
-            android:layout_width="64dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmallInverse"
             app:boxBackgroundColor="@color/white"
@@ -98,6 +98,42 @@
             app:layout_constraintTop_toTopOf="@id/tv_height"
             app:layout_constraintBottom_toBottomOf="@id/tv_height"
             app:layout_constraintEnd_toEndOf="@id/edt_weight"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        </EditText>
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/age"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_height"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_age_unit"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:text="@string/age_unit"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_semibold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_age"
+            app:layout_constraintBottom_toBottomOf="@id/tv_age"/>
+
+        <EditText
+            android:id="@+id/edt_age"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmallInverse"
+            app:boxBackgroundColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/edt_height"
+            app:layout_constraintTop_toTopOf="@id/tv_age"
+            app:layout_constraintBottom_toBottomOf="@id/tv_age"
+            app:layout_constraintEnd_toEndOf="@id/edt_height"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         </EditText>
 
@@ -110,7 +146,7 @@
             android:fontFamily="@font/poppins"
             android:textColor="@color/black"
             android:textSize="14sp"
-            app:layout_constraintTop_toBottomOf="@id/tv_height"
+            app:layout_constraintTop_toBottomOf="@id/tv_age"
             app:layout_constraintStart_toStartOf="parent"/>
 
         <TextView
@@ -130,8 +166,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmallInverse"
             app:boxBackgroundColor="@color/white"
-            app:layout_constraintStart_toStartOf="@id/edt_height"
-            app:layout_constraintEnd_toEndOf="@id/edt_height"
+            app:layout_constraintStart_toStartOf="@id/edt_age"
+            app:layout_constraintEnd_toEndOf="@id/edt_age"
             app:layout_constraintTop_toTopOf="@id/tv_daily_calories"
             app:layout_constraintBottom_toBottomOf="@id/tv_daily_calories"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
