@@ -1,9 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".presentation.note.detail.NoteDetailActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <include
+            android:id="@+id/include_app_bar_note_detail"
+            layout="@layout/include_app_bar_middle"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_date_selection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/light_red"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/include_app_bar_note_detail">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:textSize="14sp"
+                android:padding="16dp"
+                android:drawablePadding="36dp"
+                android:text="@string/date_sample"
+                app:drawableStartCompat="@drawable/ic_arrow_back_ios"
+                app:drawableEndCompat="@drawable/ic_arrow_forward_ios" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_timeline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="28dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_date_selection"
+            app:layout_constraintEnd_toEndOf="parent">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <ImageView
+            android:id="@+id/iv_chart_graphic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_chart_graphic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_timeline"/>
+
+        <TextView
+            android:id="@+id/tv_graphic_of_daily_calories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/graphic_of_daily_calories"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/iv_chart_graphic"
+            app:layout_constraintTop_toTopOf="@id/iv_chart_graphic"
+            app:layout_constraintBottom_toBottomOf="@id/iv_chart_graphic"/>
+
+        <TextView
+            android:id="@+id/tv_value_of_daily_calories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/daily_kal_sample"
+            android:textColor="@color/primary"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintTop_toTopOf="@id/tv_graphic_of_daily_calories"
+            app:layout_constraintBottom_toBottomOf="@id/tv_graphic_of_daily_calories"
+            app:layout_constraintEnd_toEndOf="@id/rv_timeline"/>
+
+        <com.github.mikephil.charting.charts.HorizontalBarChart
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="@id/tv_graphic_of_daily_calories"
+            app:layout_constraintTop_toBottomOf="@id/tv_graphic_of_daily_calories"
+            app:layout_constraintEnd_toEndOf="@id/tv_value_of_daily_calories"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
