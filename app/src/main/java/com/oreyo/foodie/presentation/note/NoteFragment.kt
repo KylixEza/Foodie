@@ -9,7 +9,7 @@ import android.viewbinding.library.fragment.viewBinding
 import com.google.android.material.tabs.TabLayoutMediator
 import com.oreyo.foodie.R
 import com.oreyo.foodie.databinding.FragmentNoteBinding
-import com.oreyo.foodie.presentation.adapter.NotePagerAdapter
+import com.oreyo.foodie.adapter.NotePagerAdapter
 
 class NoteFragment : Fragment() {
 

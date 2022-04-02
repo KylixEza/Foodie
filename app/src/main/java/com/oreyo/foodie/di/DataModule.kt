@@ -1,4 +1,4 @@
-package com.oreyo.foodie.data.di
+package com.oreyo.foodie.di
 
 import com.oreyo.foodie.data.source.datastore.FoodieDataStore
 import org.koin.dsl.module

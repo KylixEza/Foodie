@@ -1,4 +1,4 @@
-package com.oreyo.foodie.presentation.adapter
+package com.oreyo.foodie.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

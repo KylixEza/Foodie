@@ -5,13 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.viewbinding.library.fragment.viewBinding
 import androidx.activity.addCallback
 import androidx.navigation.fragment.navArgs
-import androidx.viewpager2.widget.ViewPager2
-import com.oreyo.foodie.R
 import com.oreyo.foodie.databinding.FragmentOnBoardingBinding
-import com.oreyo.foodie.presentation.adapter.OnBoardingViewPagerAdapter
+import com.oreyo.foodie.adapter.OnBoardingViewPagerAdapter
 import com.oreyo.foodie.presentation.onboard.screen.first.FirstScreenFragment
 import com.oreyo.foodie.presentation.onboard.screen.fourth.FourthScreenFragment
 import com.oreyo.foodie.presentation.onboard.screen.second.SecondScreenFragment

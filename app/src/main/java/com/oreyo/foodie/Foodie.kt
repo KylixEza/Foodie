@@ -1,7 +1,7 @@
 package com.oreyo.foodie
 
 import android.app.Application
-import com.oreyo.foodie.data.di.dataStoreModule
+import com.oreyo.foodie.di.dataStoreModule
 import com.oreyo.foodie.domain.di.repositoryModule
 import com.oreyo.foodie.domain.di.useCaseModule
 import com.oreyo.foodie.presentation.di.viewModelModule
