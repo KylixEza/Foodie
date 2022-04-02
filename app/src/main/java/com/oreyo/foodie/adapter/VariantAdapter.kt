@@ -4,9 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.kinderjoey.cookiez.util.Formatting
+import com.oreyo.foodie.util.Formatting
+import com.oreyo.foodie.adapter.callback.VariantDiffCallback
 import com.oreyo.foodie.databinding.FragmentDetailVariantBinding
 import com.oreyo.foodie.databinding.ItemListVariantBinding
 import com.oreyo.foodie.model.Variant
@@ -21,11 +23,14 @@ class VariantAdapter(
     private var selectedItem = -1
 
     fun setAllData(data: List<Variant>) {
+        val diffCallback = VariantDiffCallback(listOfVariants, data)
+        val diffRate = DiffUtil.calculateDiff(diffCallback)
+
         listOfVariants.apply {
             clear()
             addAll(data)
         }
-        notifyDataSetChanged()
+        diffRate.dispatchUpdatesTo(this)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VariantViewHolder {

@@ -1,4 +1,4 @@
-package com.kinderjoey.cookiez.util
+package com.oreyo.foodie.util
 
 object Formatting {
     fun rupiahCurrencyFormatting(price: Int?): String {

@@ -5,7 +5,7 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class Variant(
-    val menu: String,
+    val menuId: String,
     val variant: String,
     val composition: String,
     val price: Int,

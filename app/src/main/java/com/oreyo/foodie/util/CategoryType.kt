@@ -1,4 +1,4 @@
-package com.kinderjoey.cookiez.util
+package com.oreyo.foodie.util
 
 enum class CategoryType(val type: String, val title: String) {
     All("All", "Semua"),
