@@ -137,7 +137,8 @@
         app:layout_constraintEnd_toEndOf="parent">
         <include
             android:id="@+id/include_send_rating"
-            layout="@layout/include_send_rating"/>
+            layout="@layout/include_send_rating"
+            android:visibility="invisible"/>
 
     </LinearLayout>
 

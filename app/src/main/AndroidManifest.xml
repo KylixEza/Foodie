@@ -12,6 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Foodie">
         <activity
+            android:name=".presentation.profile.wallet.FoodieWalletActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.profile.history.HistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.profile.edit_profile.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.profile.address.AddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.profile.leaderboard.LeaderboardActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.note.detail.NoteDetailActivity"
             android:exported="false" />
         <activity

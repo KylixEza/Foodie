@@ -102,4 +102,7 @@
     <string name="date_sample">12 Mar 2022</string>
     <string name="graphic_of_daily_calories">Grafik Total Kalori Harian</string>
     <string name="daily_kal_sample">917 kal</string>
+    <string name="xp">XP</string>
+    <string name="my_rank">Peringkatku</string>
+    <string name="leaderboard">Leaderboard</string>
 </resources>

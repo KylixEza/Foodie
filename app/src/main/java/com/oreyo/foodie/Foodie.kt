@@ -4,7 +4,7 @@ import android.app.Application
 import com.oreyo.foodie.di.dataStoreModule
 import com.oreyo.foodie.domain.di.repositoryModule
 import com.oreyo.foodie.domain.di.useCaseModule
-import com.oreyo.foodie.presentation.di.viewModelModule
+import com.oreyo.foodie.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin

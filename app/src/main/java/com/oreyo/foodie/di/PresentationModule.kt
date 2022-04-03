@@ -1,4 +1,4 @@
-package com.oreyo.foodie.presentation.di
+package com.oreyo.foodie.di
 
 import com.oreyo.foodie.presentation.splash.SplashViewModel
 import org.koin.android.viewmodel.dsl.viewModel
