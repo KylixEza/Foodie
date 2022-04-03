@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Foodie">
         <activity
+            android:name=".presentation.profile.wallet.DetailWalletActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.profile.wallet.TopUpActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.profile.wallet.FoodieWalletActivity"
             android:exported="false" />
         <activity

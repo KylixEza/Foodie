@@ -1,7 +1,6 @@
 package com.oreyo.foodie.data.repository
 
 import com.oreyo.foodie.data.source.datastore.FoodieDataStore
-import com.oreyo.foodie.domain.repository.IFoodieRepository
 import kotlinx.coroutines.flow.Flow
 
 class FoodieRepository(

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "195113498958",
+    "project_id": "oreyo-foodie",
+    "storage_bucket": "oreyo-foodie.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:195113498958:android:96127d18a45d889329c61f",
+        "android_client_info": {
+          "package_name": "com.oreyo.foodie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "195113498958-6oi9ciabnobth6krli4b75stp4diqec2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7QIuuD2derNEhsSz6RR9EUz0p6DXVxUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "195113498958-6oi9ciabnobth6krli4b75stp4diqec2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
