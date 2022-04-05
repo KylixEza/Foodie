@@ -26,7 +26,7 @@ class FirstScreenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val viewPager = activity?.findViewById<ViewPager2>(R.id.fake_viewpager)
+        val viewPager = activity?.findViewById<ViewPager2>(R.id.view_pager)
         binding.btnNext.setOnClickListener {
             viewPager?.currentItem = 1
         }

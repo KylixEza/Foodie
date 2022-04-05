@@ -1,5 +1,6 @@
 package com.oreyo.foodie.data.mechanism
 
+import com.oreyo.foodie.data.source.remote.api.service.ApiResponse
 import com.oreyo.foodie.data.util.FirebaseResponse
 import com.oreyo.foodie.data.util.Resource
 import kotlinx.coroutines.flow.Flow
@@ -10,15 +11,15 @@ abstract class NetworkBoundRequest<RequestType> {
     private val result: Flow<Resource<Unit>> = flow {
         preRequest()
         emit(Resource.Loading())
-        when (val firebaseResponse = createCall().first()) {
-            is FirebaseResponse.Success<RequestType> -> {
-                saveCallResult(firebaseResponse.data)
+        when (val apiResponse = createCall().first()) {
+            is ApiResponse.Success<RequestType> -> {
+                saveCallResult(apiResponse.data)
                 emit(Resource.Success(null))
             }
-            is FirebaseResponse.Error -> {
+            is ApiResponse.Error -> {
                 emit(
                     Resource.Error<Unit>(
-                        firebaseResponse.errorMessage
+                        apiResponse.errorMessage
                     )
                 )
             }
@@ -27,7 +28,7 @@ abstract class NetworkBoundRequest<RequestType> {
 
     protected open suspend fun preRequest(){}
 
-    protected abstract suspend fun createCall(): Flow<FirebaseResponse<RequestType>>
+    protected abstract suspend fun createCall(): Flow<ApiResponse<RequestType>>
 
     protected abstract suspend fun saveCallResult(data: RequestType)
 

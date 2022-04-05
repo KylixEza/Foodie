@@ -15,11 +15,11 @@ class Foodie: Application() {
             androidContext(this@Foodie)
             modules(
                 listOf(
-                    dataStoreModule,
                     databaseModule,
                     networkModule,
+                    firebaseModule,
                     repositoryModule,
-                    viewModelModule
+                    viewModelModule,
                 )
             )
         }

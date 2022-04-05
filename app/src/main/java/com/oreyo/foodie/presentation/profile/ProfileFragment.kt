@@ -1,20 +1,22 @@
 package com.oreyo.foodie.presentation.profile
 
-import androidx.lifecycle.ViewModelProvider
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.viewbinding.library.fragment.viewBinding
 import com.oreyo.foodie.R
+import com.oreyo.foodie.databinding.FragmentProfileBinding
+import com.oreyo.foodie.presentation.auth.AuthActivity
+import com.oreyo.foodie.util.Constanta
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class ProfileFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = ProfileFragment()
-    }
-
-    private lateinit var viewModel: ProfileViewModel
+    private val binding by viewBinding<FragmentProfileBinding>()
+    private val viewModel by viewModel<ProfileViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,10 +25,15 @@ class ProfileFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_profile, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.includeOtherProfile.btnLogout.setOnClickListener {
+            viewModel.savePrefEmail()
+            val intent = Intent(activity, AuthActivity::class.java)
+            Constanta.SOURCE = Constanta.SOURCE_LOGOUT
+            startActivity(intent)
+            activity?.finish()
+        }
     }
 
 }

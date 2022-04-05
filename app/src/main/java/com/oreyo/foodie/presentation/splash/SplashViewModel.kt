@@ -1,15 +1,14 @@
 package com.oreyo.foodie.presentation.splash
 
-import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
-import com.oreyo.foodie.domain.usecase.auth.AuthUseCase
+import com.oreyo.foodie.data.repository.IFoodieRepository
 import kotlinx.coroutines.Dispatchers
 
 class SplashViewModel(
-    private val authUseCase: AuthUseCase
+    private val repository: IFoodieRepository
 ): ViewModel() {
 
-    fun readPrefEmail() = authUseCase.readPreEmail().asLiveData(Dispatchers.IO)
-    fun readPrefHaveRunAppBefore() = authUseCase.readPrefHaveRunAppBefore().asLiveData(Dispatchers.IO)
+    fun readPrefEmail() = repository.readPreEmail().asLiveData(Dispatchers.IO)
+    fun readPrefHaveRunAppBefore() = repository.readPrefHaveRunAppBefore().asLiveData(Dispatchers.IO)
 }
