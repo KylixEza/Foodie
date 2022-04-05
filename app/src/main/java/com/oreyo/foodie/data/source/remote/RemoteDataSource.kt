@@ -1,5 +1,7 @@
 package com.oreyo.foodie.data.source.remote
 
+import com.oreyo.foodie.data.source.remote.api.response.coupon.CouponResponse
+import com.oreyo.foodie.data.source.remote.api.response.menu.MenuResponse
 import com.oreyo.foodie.data.source.remote.api.response.user.UserBody
 import com.oreyo.foodie.data.source.remote.api.response.user.UserResponse
 import com.oreyo.foodie.data.source.remote.api.service.ApiResponse
@@ -64,4 +66,19 @@ class RemoteDataSource(
             emit(ApiResponse.Error(e.message.toString()))
         }
     }.flowOn(Dispatchers.IO)
+
+    suspend fun getSearchMenus(query: String): Flow<ApiResponse<List<MenuResponse>>> =
+        generalListCallHelper { apiService.getSearchMenus(query) }
+
+    suspend fun getCoupons(): Flow<ApiResponse<List<CouponResponse>>> =
+        generalListCallHelper { apiService.getCoupons() }
+
+    suspend fun getDietMenus(): Flow<ApiResponse<List<MenuResponse>>> =
+        generalListCallHelper { apiService.getDietMenus() }
+
+    suspend fun getPopularMenus(): Flow<ApiResponse<List<MenuResponse>>> =
+        generalListCallHelper { apiService.getPopularMenus() }
+
+    suspend fun getExclusiveMenus(): Flow<ApiResponse<List<MenuResponse>>> =
+        generalListCallHelper { apiService.getExclusiveMenus() }
 }

@@ -13,6 +13,6 @@ data class GeneralListResponse<T>(
 	val count: Int = 0,
 	
 	@SerializedName("data")
-	val data: T?
+	val data: List<T>
 
 )

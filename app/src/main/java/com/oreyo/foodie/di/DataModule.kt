@@ -4,7 +4,6 @@ import androidx.room.Room
 import com.oreyo.foodie.data.repository.FoodieRepository
 import com.oreyo.foodie.data.repository.IFoodieRepository
 import com.oreyo.foodie.data.source.local.LocalDataSource
-import com.oreyo.foodie.data.source.local.datastore.FoodieDataStore
 import com.oreyo.foodie.data.source.local.database.room.FoodieDatabase
 import com.oreyo.foodie.data.source.remote.RemoteDataSource
 import com.oreyo.foodie.data.source.remote.api.service.ApiService
