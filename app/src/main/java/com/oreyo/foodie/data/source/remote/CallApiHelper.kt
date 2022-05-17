@@ -3,7 +3,6 @@ package com.oreyo.foodie.data.source.remote
 import com.oreyo.foodie.data.source.remote.api.response.GeneralListResponse
 import com.oreyo.foodie.data.source.remote.api.service.ApiResponse
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 

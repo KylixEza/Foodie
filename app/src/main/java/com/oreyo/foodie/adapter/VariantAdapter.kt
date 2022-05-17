@@ -1,11 +1,11 @@
 package com.oreyo.foodie.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.oreyo.foodie.util.Formatting
 import com.oreyo.foodie.adapter.callback.VariantDiffCallback
@@ -15,38 +15,18 @@ import com.oreyo.foodie.model.Variant
 import com.oreyo.foodie.presentation.detail.variant.DetailVariantFragmentDirections
 
 class VariantAdapter(
-    private val owner: Fragment,
     private val binding: FragmentDetailVariantBinding,
-    ) : RecyclerView.Adapter<VariantAdapter.VariantViewHolder>() {
+    ) : BaseRecyclerViewAdapter<ItemListVariantBinding, Variant>() {
 
-    private val listOfVariants = ArrayList<Variant>()
     private var selectedItem = -1
 
-    fun setAllData(data: List<Variant>) {
-        val diffCallback = VariantDiffCallback(listOfVariants, data)
-        val diffRate = DiffUtil.calculateDiff(diffCallback)
-
-        listOfVariants.apply {
-            clear()
-            addAll(data)
-        }
-        diffRate.dispatchUpdatesTo(this)
+    override fun inflateViewBinding(parent: ViewGroup): ItemListVariantBinding {
+        return ItemListVariantBinding.inflate(LayoutInflater.from(parent.context), parent, false)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VariantViewHolder {
-        val view = ItemListVariantBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return VariantViewHolder(view)
-    }
-
-    override fun onBindViewHolder(holder: VariantViewHolder, position: Int) {
-        holder.bind(listOfVariants[position], position)
-    }
-
-    override fun getItemCount(): Int = listOfVariants.size
-
-    inner class VariantViewHolder(val view: ItemListVariantBinding): RecyclerView.ViewHolder(view.root) {
-
-        fun bind(variant: Variant, position: Int) {
+    override val binder: (Variant, View, ItemListVariantBinding) -> Unit
+        @SuppressLint("NotifyDataSetChanged")
+        get() = { variant, itemView, view ->
             view.apply {
                 tvTittleVariant.text = variant.variant
                 tvSubtitleVariant.text = variant.composition
@@ -70,18 +50,19 @@ class VariantAdapter(
                                     .text = Formatting.rupiahCurrencyFormatting(variant.price)
                             }
                         }*/
-                        notifyDataSetChanged()
+                    notifyDataSetChanged()
                 }
                 rbVariant.isChecked = (position == selectedItem)
             }
 
             binding.includeBottomBarDetail.btnOrder.setOnClickListener {
                 if (selectedItem != -1) {
-                    val selectedVariant = listOfVariants[selectedItem]
+                    val selectedVariant = itemList[selectedItem]
                     it.findNavController().navigate(DetailVariantFragmentDirections
                         .actionDetailVariantMenuFragmentToDetailOrderMenuFragment(selectedVariant))
                 }
             }
         }
-    }
+    override val diffUtilBuilder: (List<Variant>, List<Variant>) -> DiffUtil.Callback
+        get() = { old, new -> VariantDiffCallback(old, new) }
 }

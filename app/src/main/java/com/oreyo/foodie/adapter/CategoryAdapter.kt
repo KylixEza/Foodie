@@ -1,39 +1,27 @@
 package com.oreyo.foodie.adapter
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.oreyo.foodie.adapter.callback.CategoryDiffCallback
 import com.oreyo.foodie.databinding.ItemListCategoryBinding
 import com.oreyo.foodie.model.Category
 import com.oreyo.foodie.presentation.home.HomeFragmentDirections
 
-class CategoryAdapter: RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>() {
+class CategoryAdapter: BaseRecyclerViewAdapter<ItemListCategoryBinding, Category>() {
 
-    private val listOfCategory = ArrayList<Category>()
-
-    fun setAllData(data: List<Category>) {
-        listOfCategory.apply {
-            clear()
-            addAll(data)
-        }
+    override fun inflateViewBinding(parent: ViewGroup): ItemListCategoryBinding {
+        return ItemListCategoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
-        val view = ItemListCategoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return CategoryViewHolder(view)
-    }
+    override val diffUtilBuilder: (List<Category>, List<Category>) -> DiffUtil.Callback
+        get() = { oldItem, newItem -> CategoryDiffCallback(oldItem, newItem) }
 
-    override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
-        holder.bind(listOfCategory[position])
-    }
-
-    override fun getItemCount(): Int = listOfCategory.size
-
-    inner class CategoryViewHolder(private val view: ItemListCategoryBinding): RecyclerView.ViewHolder(view.root) {
-
-        fun bind(category: Category) {
+    override val binder: (Category, View, ItemListCategoryBinding) -> Unit = { category, itemView, view ->
             Glide.with(itemView.context)
                 .load(category.categoryImage)
                 .into(view.ivCategory)
@@ -44,5 +32,4 @@ class CategoryAdapter: RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>(
                     .actionNavigationHomeToCategoryActivity(category.categoryTitle, category.categoryType))
             }
         }
-    }
 }

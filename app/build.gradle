@@ -92,7 +92,7 @@ dependencies {
     implementation "org.koin:koin-android-viewmodel:2.1.6"
 
     //GMS
-    implementation "com.google.android.gms:play-services-auth:20.1.0"
+    implementation "com.google.android.gms:play-services-auth:20.2.0"
 
     //Firebase
     implementation platform('com.google.firebase:firebase-bom:28.4.0')
@@ -122,6 +122,12 @@ dependencies {
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
     //Navigation
-    implementation "androidx.navigation:navigation-fragment-ktx:2.4.1"
-    implementation "androidx.navigation:navigation-ui-ktx:2.4.1"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.4.2"
+    implementation "androidx.navigation:navigation-ui-ktx:2.4.2"
+
+    //Testing
+    testImplementation "junit:junit:4.13.2"
+    testImplementation 'org.mockito:mockito-core:4.4.0'
+    testImplementation "org.mockito:mockito-inline:4.4.0"
+    testImplementation "com.google.truth:truth:1.1.3"
 }

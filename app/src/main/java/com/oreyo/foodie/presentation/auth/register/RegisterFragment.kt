@@ -57,7 +57,7 @@ class RegisterFragment : Fragment() {
                         user.toUserBody()
                     ).observe(viewLifecycleOwner) { resource ->
                         when(resource) {
-                            is Resource.Success ->{
+                            is Resource.Success<*> ->{
                                 if (Constanta.SOURCE == Constanta.SOURCE_LOGOUT)
                                     startActivity(Intent(requireContext(), MainActivity::class.java))
                                 else

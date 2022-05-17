@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.oreyo.foodie.R
-import com.oreyo.foodie.adapter.callback.LeaderboardCallback
+import com.oreyo.foodie.adapter.callback.LeaderboardDiffCallback
 import com.oreyo.foodie.databinding.ItemListLeaderboardBinding
 import com.oreyo.foodie.model.Leaderboard
 
@@ -16,7 +16,7 @@ class LeaderboardAdapter: RecyclerView.Adapter<LeaderboardAdapter.LeaderBoardVie
     private val listOfLeaderboard = ArrayList<Leaderboard>()
 
     fun setAllData(data: List<Leaderboard>) {
-        val diffCallback = LeaderboardCallback(listOfLeaderboard, data)
+        val diffCallback = LeaderboardDiffCallback(listOfLeaderboard, data)
         val diffRate = DiffUtil.calculateDiff(diffCallback)
 
         listOfLeaderboard.apply {

@@ -68,7 +68,6 @@ class OnBoardingFragment : Fragment() {
                     3 -> binding?.viewPager?.currentItem = 2
                 }
             }
-
         }
     }
 
