@@ -1,20 +1,13 @@
 package com.oreyo.foodie.adapter.callback
 
-import androidx.recyclerview.widget.DiffUtil
 import com.oreyo.foodie.model.Variant
 
 class VariantDiffCallback(
-    private val oldVariantList: List<Variant>,
-    private val newVariantList: List<Variant>
-): DiffUtil.Callback() {
+    oldVariantList: List<Variant>,
+    newVariantList: List<Variant>
+): BaseDiffUtilCallback<Variant, Int, String>(oldVariantList, newVariantList) {
 
-    override fun getOldListSize(): Int = oldVariantList.size
+    override fun Variant.getItemIdentifier(): Int = this.hashCode()
 
-    override fun getNewListSize(): Int = newVariantList.size
-
-    override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean =
-        oldVariantList[oldItemPosition].hashCode() == newVariantList[newItemPosition].hashCode()
-
-    override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean =
-        oldVariantList[oldItemPosition].variant == newVariantList[newItemPosition].variant
+    override fun Variant.getContentIdentifier(): String = this.variant
 }
